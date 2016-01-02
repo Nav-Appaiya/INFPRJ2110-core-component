@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.Entities.Quote;
+import com.example.Entities.Root;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -19,9 +19,17 @@ public class App implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        RestTemplate restTemplate = new RestTemplate();
-        Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
-        log.info(quote.toString());
-        System.out.println(quote.toString());
+        System.out.println("APP");
     }
+
+    public App(){
+        RestTemplate restTemplate = new RestTemplate();
+        Root root = restTemplate.getForObject("http://149.210.236.249:8000/?format=json", Root.class);
+        log.info(root.toString());
+
+
+        System.out.println(root.toString());
+
+    }
+
 }
