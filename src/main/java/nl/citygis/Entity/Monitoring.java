@@ -31,59 +31,59 @@ public class Monitoring {
     @JsonProperty("type")
     private String type;
 
-    public void setMin(String min) {
-        this.min = min;
-    }
-
-    public void setMax(String max) {
-        this.max = max;
-    }
-
-    public void setUnitId(int unitId) {
-        this.unitId = unitId;
-    }
-
-    public void setSum(String sum) {
-        this.sum = sum;
-    }
-
-    public void setBeginTime(String beginTime) {
-        this.beginTime = beginTime;
-    }
-
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public String getMin() {
         return min;
+    }
+
+    public void setMin(String min) {
+        this.min = min;
     }
 
     public String getMax() {
         return max;
     }
 
+    public void setMax(String max) {
+        this.max = max;
+    }
+
     public int getUnitId() {
         return unitId;
+    }
+
+    public void setUnitId(int unitId) {
+        this.unitId = unitId;
     }
 
     public String getSum() {
         return sum;
     }
 
+    public void setSum(String sum) {
+        this.sum = sum;
+    }
+
     public String getBeginTime() {
         return beginTime;
+    }
+
+    public void setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
     }
 
     public String getEndTime() {
         return endTime;
     }
 
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
     public String getType() {
         return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

@@ -18,45 +18,45 @@ public class Event {
     @JsonProperty("port")
     protected String port;
     @JsonProperty("unitId")
-    protected int    unitId;
+    protected int unitId;
     @JsonProperty("value")
     protected String value;
 
-    public void setDateTime(String dateTime) {
-        this.dateTime = dateTime;
-    }
-
-    public void setPort(String port) {
-        this.port = port;
-    }
-
-    public void setUnitId(int unitId) {
-        this.unitId = unitId;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
     public String getDateTime() {
         return dateTime;
+    }
+
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
     }
 
     public String getPort() {
         return port;
     }
 
+    public void setPort(String port) {
+        this.port = port;
+    }
+
     public int getUnitId() {
         return unitId;
+    }
+
+    public void setUnitId(int unitId) {
+        this.unitId = unitId;
     }
 
     public String getValue() {
         return value;
     }
 
+    public void setValue(String value) {
+        this.value = value;
+    }
+
     @Override
     public String toString() {
         return "Event{" + "dateTime='" + dateTime + '\'' + ", port='" + port + '\'' + ", unitId=" + unitId
-               + ", value='" + value + '\'' + '}';
+                + ", value='" + value + '\'' + '}';
     }
 }

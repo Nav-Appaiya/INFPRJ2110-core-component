@@ -1,4 +1,4 @@
-package nl.citygis;
+package nl.citygis.Entity;
 
 /**
  * Created by nav on 04-01-16.

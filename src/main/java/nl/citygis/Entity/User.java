@@ -46,67 +46,67 @@ public class User {
     @JsonProperty("email")
     private String email;
 
-    public void setJoined_at(String joined_at) {
-        this.joined_at = joined_at;
-    }
-
-    public void setLast_login_at(String last_login_at) {
-        this.last_login_at = last_login_at;
-    }
-
-    public void setIs_staff(boolean is_staff) {
-        this.is_staff = is_staff;
-    }
-
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
-    }
-
-    public void setAuth_token(String auth_token) {
-        this.auth_token = auth_token;
-    }
-
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getJoined_at() {
         return joined_at;
+    }
+
+    public void setJoined_at(String joined_at) {
+        this.joined_at = joined_at;
     }
 
     public String getLast_login_at() {
         return last_login_at;
     }
 
+    public void setLast_login_at(String last_login_at) {
+        this.last_login_at = last_login_at;
+    }
+
     public boolean isIs_staff() {
         return is_staff;
+    }
+
+    public void setIs_staff(boolean is_staff) {
+        this.is_staff = is_staff;
     }
 
     public String getLast_name() {
         return last_name;
     }
 
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
+    }
+
     public String getAuth_token() {
         return auth_token;
+    }
+
+    public void setAuth_token(String auth_token) {
+        this.auth_token = auth_token;
     }
 
     public String getFirst_name() {
         return first_name;
     }
 
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+    }
+
     public String getUrl() {
         return url;
     }
 
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     public String getEmail() {
         return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

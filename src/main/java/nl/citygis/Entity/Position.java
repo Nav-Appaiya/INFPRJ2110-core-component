@@ -37,75 +37,75 @@ public class Position {
     @JsonProperty("quality")
     private String quality;
 
-    public void setNumSattellites(int numSattellites) {
-        this.numSattellites = numSattellites;
-    }
-
-    public void setDateTime(String dateTime) {
-        this.dateTime = dateTime;
-    }
-
-    public void setRDy(String rDy) {
-        this.rDy = rDy;
-    }
-
-    public void setRDx(String rDx) {
-        this.rDx = rDx;
-    }
-
-    public void setUnitId(int unitId) {
-        this.unitId = unitId;
-    }
-
-    public void setCourse(String course) {
-        this.course = course;
-    }
-
-    public void setHdop(int hdop) {
-        this.hdop = hdop;
-    }
-
-    public void setSpeed(String speed) {
-        this.speed = speed;
-    }
-
-    public void setQuality(String quality) {
-        this.quality = quality;
-    }
-
     public int getNumSattellites() {
         return numSattellites;
+    }
+
+    public void setNumSattellites(int numSattellites) {
+        this.numSattellites = numSattellites;
     }
 
     public String getDateTime() {
         return dateTime;
     }
 
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
+    }
+
     public String getRDy() {
         return rDy;
+    }
+
+    public void setRDy(String rDy) {
+        this.rDy = rDy;
     }
 
     public String getRDx() {
         return rDx;
     }
 
+    public void setRDx(String rDx) {
+        this.rDx = rDx;
+    }
+
     public int getUnitId() {
         return unitId;
+    }
+
+    public void setUnitId(int unitId) {
+        this.unitId = unitId;
     }
 
     public String getCourse() {
         return course;
     }
 
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
     public int getHdop() {
         return hdop;
+    }
+
+    public void setHdop(int hdop) {
+        this.hdop = hdop;
     }
 
     public String getSpeed() {
         return speed;
     }
 
+    public void setSpeed(String speed) {
+        this.speed = speed;
+    }
+
     public String getQuality() {
         return quality;
+    }
+
+    public void setQuality(String quality) {
+        this.quality = quality;
     }
 }

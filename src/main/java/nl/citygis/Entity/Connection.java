@@ -24,35 +24,35 @@ public class Connection {
     @JsonProperty("value")
     private String value;
 
-    public void setDateTime(String dateTime) {
-        this.dateTime = dateTime;
-    }
-
-    public void setPort(String port) {
-        this.port = port;
-    }
-
-    public void setPermissions(List<String> permissions) {
-        this.permissions = permissions;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
     public String getDateTime() {
         return dateTime;
+    }
+
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
     }
 
     public String getPort() {
         return port;
     }
 
+    public void setPort(String port) {
+        this.port = port;
+    }
+
     public List<String> getPermissions() {
         return permissions;
     }
 
+    public void setPermissions(List<String> permissions) {
+        this.permissions = permissions;
+    }
+
     public String getValue() {
         return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 }
