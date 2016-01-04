@@ -1,6 +1,5 @@
 package nl.citygis.Tasks;
 
-import nl.citygis.Entity.Root;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -8,8 +7,6 @@ import org.springframework.web.client.RestTemplate;
 import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by nav on 04-01-16.
@@ -35,6 +32,7 @@ public class Connection {
 
     @Scheduled(fixedRate = 3000)
     public void connectThisToCollector() {
-        System.out.println("The time is now " + dateFormat.format(new Date()) + "\n ============================================");
+        System.out.println("Connection.connectThisToCollector");
+        System.out.println("======================"+dateFormat.format(new Date())+"======================");
     }
 }

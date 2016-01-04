@@ -7,7 +7,6 @@ import nl.citygis.Entity.Position;
 import nl.citygis.Tasks.AuthInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +17,7 @@ import java.util.Collections;
 
 @SpringBootApplication
 @EnableScheduling
-public class Application implements CommandLineRunner {
+public class Application {
 
     private static final String root = "http://149.210.236.249:8000/?format=json";
     private static final String events = "http://149.210.236.249:8000/events?format=json";
@@ -29,19 +28,13 @@ public class Application implements CommandLineRunner {
     private static final Logger log = LoggerFactory.getLogger(Application.class);
     private static final RestTemplate restTemplate = new RestTemplate();
 
+    // By Nav Appaiya, 4 Januari 2016, Rotterdam.
     public static void main(String args[]) {
-        // Setting up header with token
-        // for access to protected resources
-        restTemplate.setInterceptors(
-                Collections.singletonList(new AuthInterceptor())
-        );
 
-        // By Nav Appaiya, 4 Januari 2016, Rotterdam.
         // Run Spring boot :)
         SpringApplication.run(Application.class, args);
     }
 
-    @Override
     public void run(String... strings) throws Exception {
         Event[] e = this.getEvents();
         Connection[] c = this.getConnections();
