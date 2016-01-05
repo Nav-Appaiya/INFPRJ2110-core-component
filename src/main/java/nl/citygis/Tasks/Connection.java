@@ -1,5 +1,7 @@
 package nl.citygis.Tasks;
 
+import nl.citygis.Tools.AuthInterceptor;
+import nl.citygis.Tools.Vcapenv;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -34,5 +36,7 @@ public class Connection {
     public void connectThisToCollector() {
         System.out.println("Connection.connectThisToCollector");
         System.out.println("======================"+dateFormat.format(new Date())+"======================");
+        String x = REST_TEMPLATE.getForObject("http://149.210.236.249:8000/connections", String.class);
+        System.out.println(x);
     }
 }

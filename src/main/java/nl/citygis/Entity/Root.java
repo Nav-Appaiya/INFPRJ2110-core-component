@@ -1,7 +1,7 @@
 package nl.citygis.Entity;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import nl.citygis.Tasks.AuthInterceptor;
+import nl.citygis.Tools.AuthInterceptor;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;

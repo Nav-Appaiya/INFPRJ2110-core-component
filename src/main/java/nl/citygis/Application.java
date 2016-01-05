@@ -4,7 +4,7 @@ import nl.citygis.Entity.Connection;
 import nl.citygis.Entity.Event;
 import nl.citygis.Entity.Monitoring;
 import nl.citygis.Entity.Position;
-import nl.citygis.Tasks.AuthInterceptor;
+import nl.citygis.Tools.AuthInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;

@@ -8,6 +8,15 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * Created by nav on 04-01-16.
+ *
+ * mysql service db jdbc @cloudfoundry info:
+ * hostname: us-cdbr-iron-east-03.cleardb.net
+ * jdbcUrl: jdbc:mysql://us-cdbr-iron-east-03.cleardb.net/ad_e0c95e38ef3eabc?user=b6f9880502ce7d&password=15897ea1
+ * name: ad_e0c95e38ef3eabc
+ * password: 15897ea1
+ * port: 3306
+ * uri: mysql://b6f9880502ce7d:15897ea1@us-cdbr-iron-east-03.cleardb.net:3306/ad_e0c95e38ef3eabc?reconnect=true
+ * username: b6f9880502ce7d
  */
 @Controller
 public class DebugController {
@@ -18,8 +27,9 @@ public class DebugController {
     @RequestMapping("/")
     public String debug(@RequestParam(value = "name", required = false, defaultValue = "World") String name, Model model) {
         model.addAttribute("name", name);
+
         String root = restTemplate.getForObject(apiRoot, String.class);
-        return root.toString();
+        return root;
     }
 
 }
