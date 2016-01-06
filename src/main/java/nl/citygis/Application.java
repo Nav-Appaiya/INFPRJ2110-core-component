@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.client.RestTemplate;
 
@@ -30,7 +31,6 @@ public class Application {
 
     // By Nav Appaiya, 4 Januari 2016, Rotterdam.
     public static void main(String args[]) {
-
         // Run Spring boot :)
         SpringApplication.run(Application.class, args);
     }
@@ -41,10 +41,13 @@ public class Application {
         Monitoring[] m = this.getMonitoring();
         Position[] p = this.getPositions();
 
-        System.out.println( e.length ); // 162
-        System.out.println( c.length ); // 116
-        System.out.println( m.length ); // 32
-        System.out.println( p.length ); // 45
+//        System.out.println( e.length ); // 162
+//        System.out.println( c.length ); // 116
+//        System.out.println( m.length ); // 32
+//        System.out.println( p.length ); // 45
+
+        // Save with JDBC to database
+        JdbcTemplate j = new JdbcTemplate();
 
     }
 

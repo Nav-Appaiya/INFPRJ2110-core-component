@@ -1,0 +1,5 @@
+<bean class="org.springframework.web.client.RestTemplate">
+    <property name="errorHandler">
+        <bean class="myapp.client.MyResponseErrorHandler"/>
+    </property>
+</bean>

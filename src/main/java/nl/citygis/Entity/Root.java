@@ -11,7 +11,7 @@ import java.util.Collections;
  * <p>
  * Een entity die de root van de API vastlegd.
  * Voor elk 4 van data streams:
- * - Connection
+ * - ConnectionTemplate
  * - Position
  * - Event
  * - Monitoring

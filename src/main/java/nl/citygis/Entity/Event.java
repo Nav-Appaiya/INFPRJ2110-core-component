@@ -1,18 +1,18 @@
 package nl.citygis.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * Created by nav on 03-01-16.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@Entity
 public class Event {
 
-    /**
-     * dateTime : 2012-12-02
-     * port : Ignition
-     * unitId : 57
-     * value : 1
-     */
     @JsonProperty("dateTime")
     protected String dateTime;
     @JsonProperty("port")
@@ -21,6 +21,16 @@ public class Event {
     protected int unitId;
     @JsonProperty("value")
     protected String value;
+    @Id
+    private long id;
+
+
+    public Event(int unitId) {
+        this.unitId = unitId;
+    }
+
+    public Event() {
+    }
 
     public String getDateTime() {
         return dateTime;
